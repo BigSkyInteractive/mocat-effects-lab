@@ -1,6 +1,6 @@
-# TouchFree Effects Lab
+# MoCat Effects Lab
 
-Body, hand, face, and video driven feedback effects for [TouchFree](https://bigskyinteractive.com):
+Body, hand, face, and video driven feedback effects for [MoCat](https://bigskyinteractive.com):
 the live camera, the person's real-time body, hand and face feed a WebGL
 flow engine, and an effect is a **preset**: two short shader bodies and a
 set of dials, editable live in the page's own panel. Free to use and to
@@ -21,8 +21,8 @@ no video files, no network, no randomness that is not asked for.
 
 ## What it needs
 
-A running [TouchFree Desktop](https://bigskyinteractive.com) app on the
-same machine. The page is a TouchFree **content page**: TouchFree serves
+A running [MoCat](https://bigskyinteractive.com) app on the
+same machine. The page is a MoCat **content page**: MoCat serves
 it and provides everything it consumes:
 
 | Input | From |
@@ -39,8 +39,8 @@ software rendering rather than running badly.
 
 ## Install
 
-1. Copy this folder into `Documents\TouchFree\Content\effects_lab`.
-2. In the TouchFree dashboard: **Content → Page → effects_lab → Launch**.
+1. Copy this folder into `Documents\MoCat\Content\effects_lab`.
+2. In the MoCat dashboard: **Content → Page → effects_lab → Launch**.
 3. Set the tracking model on the Control page to the body data mode.
 
 ## Using it
@@ -86,7 +86,7 @@ copying its file.
 
 ## Output with alpha (OBS, Resolume, TouchDesigner)
 
-TouchFree's Spout output renders this page off-screen with real per-pixel
+MoCat's Spout output renders this page off-screen with real per-pixel
 transparency: set the Stage tab's **Black is transparent** on, and in OBS
 set the Spout2 source's **Composite mode** to **Premultiplied Alpha**. The
 person and the light arrive on a clear background.

@@ -100,7 +100,7 @@ async function fetchJson(file) {
 }
 function postConfig(file, obj) {
   const page = contentPageName();
-  if (!page) { toast('Save needs the TouchFree app behind the page'); return Promise.resolve(false); }
+  if (!page) { toast('Save needs the MoCat app behind the page'); return Promise.resolve(false); }
   return fetch('/api/kiosk/content-config', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ page, file, config: obj }) })
     .then((r) => r.json()).then((d) => { if (!d.ok) toast('Save failed: ' + (d.error || 'unknown')); return !!d.ok; })
     .catch((e) => { toast('Save failed<small>' + e + '</small>'); return false; });
@@ -400,7 +400,7 @@ function loadPreset(name) {
 async function savePreset(name) {
   name = (name || '').trim(); if (!name || !preset) return false;
   const page = contentPageName();
-  if (!page) { toast('Save needs the TouchFree app behind the page'); return false; }
+  if (!page) { toast('Save needs the MoCat app behind the page'); return false; }
   const body = { page, name, preset: JSON.parse(JSON.stringify({ format: 2, dials: preset.dials, feed: preset.feed, show: preset.show, stage: preset.stage })) };
   const r = await fetch('/api/kiosk/content-presets', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) }).then((x) => x.json()).catch((e) => ({ ok: false, error: String(e) }));
   if (!r.ok) { toast('Save failed: ' + (r.error || 'unknown')); return false; }

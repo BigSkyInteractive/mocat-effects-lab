@@ -238,7 +238,7 @@ export function createCameraView(canvas, statusEl) {
                  (setup && setup.body_keypoints_px && setup.body_keypoints_px.length ? ' · body' : ' · no body')
         : bindError ? 'camera: ' + bindError
         : bound ? 'camera: profile bound, waiting for frames'
-        : 'camera: asking /api/camera/detect (needs the TouchFree app)';
+        : 'camera: asking /api/camera/detect (needs the MoCat app)';
     }
     if (!live) return;
     const fw = feedImg.naturalWidth, fh = feedImg.naturalHeight;

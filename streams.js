@@ -1,6 +1,6 @@
 /*
 The two picture streams the page reads, the camera (JPEG) and the body mask
-(PNG), both multipart MJPEG from the TouchFree server, read with fetch and
+(PNG), both multipart MJPEG from the MoCat server, read with fetch and
 a ReadableStream instead of an <img>.
 
 Why not an <img>. An <img> on a multipart stream decodes every part in
